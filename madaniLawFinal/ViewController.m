@@ -60,9 +60,18 @@
                 reuseIdentifier:CellIdentifier];
     }
     
-    
-    cell.textLabel.text=[acts objectAtIndex:indexPath.row];
+    if ([[acts objectAtIndex:indexPath.row] length] >= 35) {
+        cell.textLabel.text=[[acts objectAtIndex:indexPath.row] substringToIndex:35];
+
+    }
+    else
+    {
+        cell.textLabel.text=[acts objectAtIndex:indexPath.row] ;
+        
+    }
     cell.textLabel.textAlignment=UITextAlignmentRight;
+    cell.textLabel.adjustsFontSizeToFitWidth = NO;
+
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

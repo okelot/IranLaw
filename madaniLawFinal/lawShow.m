@@ -40,7 +40,6 @@
 {
     [self.textLaw setText:lawText];
     NSString* str = [[NSString alloc]initWithFormat:@"%d",lawNum ];
-    [self.numLaw setText: str];
     text = lawText;
     [self.textLaw reloadInputViews];
 }

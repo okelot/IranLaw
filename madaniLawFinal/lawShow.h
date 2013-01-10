@@ -16,6 +16,5 @@
 -(void)initWithLawNum:(int)lawNum lawText:(NSString*)lawText;
 - (IBAction)Done:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *numLaw;
 
 @end
